@@ -1,0 +1,10 @@
+--- a/build.gradle
++++ b/build.gradle
+@@ -41,6 +41,7 @@
+     apply plugin: 'idea'
+ 
+     version = parent.version
++    group = 'org.smali'
+ 
+     jar {
+         version = jarVersion

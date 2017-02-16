@@ -1,0 +1,30 @@
+Source: smali-1
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
+Build-Depends:
+ debhelper (>= 10~),
+ default-jdk-headless | default-jdk,
+ gradle-debian-helper,
+ maven-repo-helper,
+ libjgit-java,
+ libguava-java,
+ libjsr305-java
+Standards-Version: 3.9.8
+Homepage: https://github.com/JesusFreke/smali
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/smali-1.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/smali-1.git
+
+Package: libsmali-dexlib-1-java
+Architecture: all
+Depends: libguava-java,
+         libjsr305-java,
+         ${misc:Depends}
+Description: assembler/disassembler for Android's dex format
+ smali/baksmali is an assembler/disassembler for the dex format used by dalvik,
+ Android's Java VM implementation. The syntax is loosely based on
+ Jasmin's/dedexer's syntax and supports the full functionality of the dex
+ format like annotations, debug info and line info.
+ .
+ This library provides APIs for interacting the DEX format.

@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/pkg-info.mk
+
+%:
+	dh $@ --parallel --with maven_repo_helper --buildsystem=gradle
+
+override_dh_auto_build:
+	dh_auto_build -- -Dfile.encoding=UTF-8 :dexlib:assemble
+
+get-orig-source: $(DEB_VERSION_UPSTREAM).tar.gz
+	mk-origtargz --repack --compression xz $<
+
+$(DEB_VERSION_UPSTREAM).tar.gz:
+	wget https://github.com/JesusFreke/smali/archive/v$@ -O $@

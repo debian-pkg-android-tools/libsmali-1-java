@@ -1,0 +1,1 @@
+dexlib/build/debian/dexlib.pom --java-lib --artifact=dexlib/build/libs/*.jar
