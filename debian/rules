@@ -3,7 +3,7 @@
 include /usr/share/dpkg/pkg-info.mk
 
 %:
-	dh $@ --parallel --with maven_repo_helper --buildsystem=gradle
+	dh $@ --with maven_repo_helper --buildsystem=gradle
 
 override_dh_auto_build:
 	dh_auto_build -- -Dfile.encoding=UTF-8 :dexlib:assemble
