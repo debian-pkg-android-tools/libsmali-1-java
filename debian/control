@@ -1,7 +1,7 @@
-Source: smali-1
+Source: libsmali-1-java
 Section: java
 Priority: optional
-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Maintainer: Android Tools Maintainers <android-tools-devel@lists.alioth.debian.org>
 Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
 Build-Depends:
  debhelper (>= 10~),
@@ -13,10 +13,10 @@ Build-Depends:
  libjsr305-java
 Standards-Version: 3.9.8
 Homepage: https://github.com/JesusFreke/smali
-Vcs-Git: https://anonscm.debian.org/git/pkg-java/smali-1.git
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/smali-1.git
+Vcs-Git: https://anonscm.debian.org/git/android-tools/libsmali-1-java.git
+Vcs-Browser: https://anonscm.debian.org/cgit/android-tools/libsmali-1-java.git
 
-Package: libsmali-dexlib-1-java
+Package: libsmali-1-java
 Architecture: all
 Depends: libguava-java,
          libjsr305-java,
@@ -27,4 +27,5 @@ Description: assembler/disassembler for Android's dex format
  Jasmin's/dedexer's syntax and supports the full functionality of the dex
  format like annotations, debug info and line info.
  .
- This library provides APIs for interacting the DEX format.
+ This package provides only the version 1.x of dexlib for backward
+ compatibility.

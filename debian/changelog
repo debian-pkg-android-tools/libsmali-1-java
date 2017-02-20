@@ -1,4 +1,4 @@
-smali-1 (1.4.2-1) UNRELEASED; urgency=medium
+libsmali-1-java (1.4.2-1) UNRELEASED; urgency=medium
 
   * Initial release (Closes: #855274)
 
